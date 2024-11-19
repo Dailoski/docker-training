@@ -1,0 +1,10 @@
+name: docker-training-ecr
+description: AWS infra for docker training
+runtime:
+  name: nodejs
+  options:
+    packagemanager: npm
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: aws-typescript
