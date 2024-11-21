@@ -27,7 +27,7 @@ Before we start with the training, make sure you have the following tools instal
 Clone this repo locally:
 
 ```bash
-git clone [repo-url]
+git clone git@github.com:amirilovic/docker-training.git
 ```
 
 Navigate to the repo directory:

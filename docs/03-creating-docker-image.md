@@ -124,6 +124,16 @@ my-next-app     latest         3d9489a7b7b7   3 days ago      199MB
 
 Size of the image is important as it affects the time it takes to download and run the image, but also the amount of disk space it takes on the host machine. It is recommended to keep the size of the image as small as possible by following the best practices mentioned above.
 
+## Inspecting the Docker Image
+
+To inspect the Docker image we can run the following command:
+
+```bash
+docker inspect my-next-app
+```
+
+This will output a JSON object with detailed information about the image. We can use this information to see the layers that make up the image, the environment variables that are set, the ports that are exposed, and other metadata.
+
 ## Summary
 
 With all the files setup and committed to the repository, in order to build and run the app in a container we need to:

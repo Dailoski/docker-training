@@ -22,6 +22,14 @@ When you start a container it gets a unique ID and a name. But you can also name
 docker run --name my-container my-next-app
 ```
 
+## View Logs
+
+To view the logs of a running container we can use the `docker logs` command:
+
+```bash
+docker logs my-container
+```
+
 ## Port Mappings
 
 Port mappings allow us to map ports from the container to ports on the host machine. This is useful when we want to access services running inside the container from the host machine. For example, if our app is running on port `3000` inside the container, we can map this port to port `3000` on the host machine by using the `-p` flag:

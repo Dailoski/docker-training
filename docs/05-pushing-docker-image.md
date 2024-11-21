@@ -23,25 +23,25 @@ Output should look similar to this:
 ```json
 {
   "UserId": "AIDAJDPLRKLG7EXAMPLE",
-  "Account": "936223510818",
-  "Arn": "arn:aws:iam::936223510818:user/user1"
+  "Account": "711387109540",
+  "Arn": "arn:aws:iam::711387109540:user/user1"
 }
 ```
 
 After that, we can login to AWS ECR by running the following command:
 
 ```bash
-aws ecr get-login-password --region eu-central-1 | docker login --username AWS --password-stdin 936223510818.dkr.ecr.eu-central-1.amazonaws.com
+aws ecr get-login-password --region eu-central-1 | docker login --username AWS --password-stdin 711387109540.dkr.ecr.eu-central-1.amazonaws.com
 ```
 
 Now we can tag the docker image with the ECR repository URL:
 
 ```bash
-docker tag my-next-app:latest 936223510818.dkr.ecr.eu-central-1.amazonaws.com/user1-repo:latest
+docker tag my-next-app:latest 711387109540.dkr.ecr.eu-central-1.amazonaws.com/user1-repo:latest
 ```
 
 And finally push the image to ECR:
 
 ```bash
-docker push 936223510818.dkr.ecr.eu-central-1.amazonaws.com/user1-repo:latest
+docker push 711387109540.dkr.ecr.eu-central-1.amazonaws.com/user1-repo:latest
 ```

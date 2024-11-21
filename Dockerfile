@@ -14,8 +14,10 @@ EXPOSE 3000
 
 ENV PORT=3000
 ENV NODE_ENV=production
+ENV HOSTNAME='0.0.0.0'
 
 USER node
 
+
 # Start the app
-CMD ["node", "server.js"]
+CMD ["/bin/sh", "-c", "HOSTNAME='0.0.0.0' node server.js"]
