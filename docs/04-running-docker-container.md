@@ -22,6 +22,14 @@ When you start a container it gets a unique ID and a name. But you can also name
 docker run --name my-container my-next-app
 ```
 
+When you run a container by default the process doesn't accept input from the terminal. To run the container in interactive mode and attach the terminal to it we can use the `-it` flag:
+
+```bash
+docker run -it my-next-app
+```
+
+You will get a shell prompt inside the container and you can interact with the app running inside.
+
 ## View Logs
 
 To view the logs of a running container we can use the `docker logs` command:
