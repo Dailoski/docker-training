@@ -1,0 +1,17 @@
+# Use the official .NET runtime image as a base image
+FROM mcr.microsoft.com/dotnet/aspnet:9.0
+
+# Set the working directory inside the container
+WORKDIR /app
+
+# Copy the build output from the build stage
+COPY ./out .
+
+# Expose the port the app runs on
+EXPOSE 8080
+
+# Declare environment variables needed for your project to run
+ENV MY_NAME="{{YOUR_NAME}}"
+
+# Start the app
+CMD ["dotnet", "Todos.Api.dll"]
