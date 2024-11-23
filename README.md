@@ -22,10 +22,10 @@ Before we start with the training, make sure you have the following tools instal
 
 ## Getting Started
 
-Clone this repo locally:
+Fork this repository to your GitHub account and clone it to your local machine:
 
 ```bash
-git clone git@github.com:amirilovic/docker-training.git
+git clone git@github.com:{{YOUR_GH_USERNAME}}/docker-training.git
 ```
 
 Navigate to the cloned directory:
