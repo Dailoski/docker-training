@@ -14,7 +14,8 @@ In this exercise, we will run a Docker container from an already created image t
 docker run -d -p 8080:80 --name my-nginx nginx
 ```
 
-NOTE: `-d` flag runs the container in the background. `-p` flag exposes the port `80` from the container to the host on port `8080`. If the image is not available locally, Docker will pull the image from Docker Hub before starting the container.
+> [!NOTE]
+> `-d` flag runs the container in the background. `-p` flag exposes the port `80` from the container to the host on port `8080`. If the image is not available locally, Docker will pull the image from Docker Hub before starting the container.
 
 2. View running containers by running the following command:
 

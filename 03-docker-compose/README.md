@@ -63,7 +63,8 @@ docker-compose up -d
 docker-compose logs
 ```
 
-NOTE: You should see "database system is ready to accept connections" in the logs for the `db` service.
+> [!NOTE]
+> You should see "database system is ready to accept connections" in the logs for the `db` service.
 
 9. Run the application using the following command:
 

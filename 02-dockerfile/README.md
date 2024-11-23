@@ -64,43 +64,45 @@ docker build -t todos-api .
 docker images
 ```
 
-NOTE: You should see the `todos-api` image in the list and the size of the image, it's size should be around 255MB. You can also run `docker inspect todos-api` to see the image details.
+> [!NOTE]
+> You should see the `todos-api` image in the list and the size of the image, it's size should be around 255MB. You can also run `docker inspect todos-api` to see the image details.
 
-6. Run the build image again to see the cached layers:
+7. Run the build image again to see the cached layers:
 
 ```bash
 docker build -t todos-api .
 ```
 
-NOTE: You should see that the `COPY ./out .` layer is cached, this is because the `out` directory hasn't changed since the last build.
+> [!NOTE]
+> You should see that the `COPY ./out .` layer is cached, this is because the `out` directory hasn't changed since the last build.
 
-7. Run the Docker container using the following command:
+8. Run the Docker container using the following command:
 
 ```bash
 docker run -d -p 8080:8080 todos-api
 ```
 
-8. Open [http://localhost:8080/api/ping](http://localhost:8080/api/ping) in your browser to see the result.
+9. Open [http://localhost:8080/api/ping](http://localhost:8080/api/ping) in your browser to see the result.
 
-9. Find the container ID using the following command:
+10. Find the container ID using the following command:
 
 ```bash
 docker ps
 ```
 
-10. View the logs of the running container using the following command:
+11. View the logs of the running container using the following command:
 
 ```bash
 docker logs {{CONTAINER_ID}}
 ```
 
-11. Stop the container using the following command:
+12. Stop the container using the following command:
 
 ```bash
 docker stop {{CONTAINER_ID}}
 ```
 
-12. Remove the container using the following command:
+13. Remove the container using the following command:
 
 ```bash
 docker rm {{CONTAINER_ID}}

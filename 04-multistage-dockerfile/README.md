@@ -48,7 +48,8 @@ docker build -t todos-api .
 docker images todos-api
 ```
 
-NOTE: The size of the Docker image is the same as in the previous exercise. This is because the `build` stage is not included in the final image.
+> [!NOTE]
+> The size of the Docker image is the same as in the previous exercise. This is because the `build` stage is not included in the final image.
 
 6. Run the Docker container using the following command:
 
