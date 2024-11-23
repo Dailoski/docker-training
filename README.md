@@ -2,15 +2,6 @@
 
 This is a training repository for learning Docker. The training content is divided into multiple sections that cover different aspects of Docker. Each section contains a markdown file with detailed instructions on how to perform the tasks.
 
-## Training Content
-
-- [What is Docker?](docs/01-what-is-docker.md)
-- [Building an App](docs/02-building-an-app.md)
-- [Creating a Docker Image](docs/03-creating-docker-image.md)
-- [Running a Docker Container](docs/04-running-docker-container.md)
-- [Pushing Docker Image](docs/05-pushing-docker-image.md)
-- [Docker Compose](docs/06-docker-compose.md)
-
 ## Pre-requisites
 
 Before we start with the training, make sure you have the following tools installed on your machine:
@@ -18,9 +9,16 @@ Before we start with the training, make sure you have the following tools instal
 - [Git](https://git-scm.com/downloads)
 - [Docker](https://docs.docker.com/get-docker/)
 - [Docker Compose](https://docs.docker.com/compose/install/)
-- [Docker Buildx](https://docs.docker.com/buildx/working-with-buildx/)
 - [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html)
-- [Node.js](https://nodejs.org/en/download/)
+- [Dotnet SDK](https://dotnet.microsoft.com/download)
+
+## Exercises
+
+- [Exercise 1: Run a Docker container](01-run-container/README.md)
+- [Exercise 2: Create a Dockerfile for the Todos.Api project](02-dockerfile/README.md)
+- [Exercise 3: Create a Docker Compose file for the Todos.Api project](03-docker-compose/README.md)
+- [Exercise 4: Using Multi-stage Dockerfile for the Todos.Api project](04-multistage-dockerfile/README.md)
+- [Exercise 5: Push Docker image to AWS ECR](05-docker-push/README.md)
 
 ## Getting Started
 
@@ -30,22 +28,10 @@ Clone this repo locally:
 git clone git@github.com:amirilovic/docker-training.git
 ```
 
-Navigate to the repo directory:
+Navigate to the cloned directory:
 
 ```bash
 cd docker-training
 ```
 
-Install the dependencies:
-
-```bash
-npm install
-```
-
-Start the development server:
-
-```bash
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
+Choose a section from the training content and follow the instructions in the `README.md` file.

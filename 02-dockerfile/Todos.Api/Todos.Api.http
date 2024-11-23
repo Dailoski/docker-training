@@ -1,0 +1,7 @@
+@Todos.Api_HostAddress = http://localhost:5019
+
+GET {{Todos.Api_HostAddress}}/api/ping
+Accept: application/json
+
+
+###
