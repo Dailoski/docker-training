@@ -51,3 +51,5 @@ docker rmi nginx
 ## Summary
 
 In this exercise, you learned how to run a Docker container from an image hosted on Docker Hub. You also learned how to view the logs of the running container, stop the container, and remove the container and image.
+
+For more information on the `docker run` command, refer to the [official documentation](https://docs.docker.com/reference/cli/docker/container/run/).

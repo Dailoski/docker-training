@@ -73,3 +73,5 @@ docker stop {{CONTAINER_ID}}
 ## Summary
 
 In this exercise, you learned how to create a multi-stage Dockerfile for the Todos.Api project. The multi-stage Dockerfile helps to reduce the size of the final Docker image by using separate build and runtime stages. Multi-stage files also simplify the build process as we don't need to install build tools on the host machine in order to build the project.
+
+For more information on multi-stage Dockerfiles, refer to the [official documentation](https://docs.docker.com/build/building/multi-stage/).

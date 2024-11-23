@@ -84,3 +84,5 @@ docker stop {{CONTAINER_ID}}
 ## Summary
 
 In this exercise, you learned how to push a Docker image to AWS Elastic Container Registry (ECR) and run a Docker container from the image stored in ECR.
+
+For more information on AWS Elastic Container Registry (ECR), refer to the [official documentation](https://docs.aws.amazon.com/AmazonECR/latest/userguide/what-is-ecr.html). For more information on the `docker push` command, refer to the [official documentation](https://docs.docker.com/engine/reference/commandline/push/).

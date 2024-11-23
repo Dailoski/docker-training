@@ -101,3 +101,5 @@ docker rm {{CONTAINER_ID}}
 ## Summary
 
 In this exercise, you learned how to create a Dockerfile for the Todos.Api project. You also learned how to build a Docker image, run a Docker container, view the logs of the running container, stop the container, and remove the container.
+
+For more information on `Dockerfile` instructions, refer to the [official documentation](https://docs.docker.com/reference/dockerfile/).

@@ -140,3 +140,5 @@ docker-compose down --rmi all -v --remove-orphans
 ## Summary
 
 In this exercise, you learned how to create a Docker Compose file for the Todos.Api project. You also learned how to define services for the Todos.Api project and a PostgreSQL database service in the Docker Compose file. You ran the services using Docker Compose and interacted with the application to create a new task in the database. Finally, you updated the Docker Compose file to include the application service and ran the services again to verify the changes.
+
+For more information on Docker Compose, refer to the [official documentation](https://docs.docker.com/compose/).
