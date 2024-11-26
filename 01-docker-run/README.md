@@ -14,8 +14,7 @@ In this exercise, we will run a Docker container from an already created image t
 docker run -d -p 8080:80 --name my-nginx nginx
 ```
 
-> [!NOTE]
-> `-d` flag runs the container in the background. `-p` flag exposes the port `80` from the container to the host on port `8080`. If the image is not available locally, Docker will pull the image from Docker Hub before starting the container.
+> [!NOTE] > `-d` flag runs the container in the background. `-p` flag exposes the port `80` from the container to the host on port `8080`. If the image is not available locally, Docker will pull the image from Docker Hub before starting the container.
 
 2. View running containers by running the following command:
 
@@ -48,6 +47,15 @@ docker rm my-nginx
 ```bash
 docker rmi nginx
 ```
+
+Optional:
+
+- Run `nginx` on a port 8090
+- Find all containers which are stopped on your machine
+- Run a different version of `nginx` image
+- Run a `hello-world` image, see the output, and remove the container
+- When you run `docker run --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword -d postgres` what does `-e` flag do?
+- Run `rabbitmq` image and login to the management console
 
 ## Summary
 
