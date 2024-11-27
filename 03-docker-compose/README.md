@@ -138,6 +138,10 @@ docker-compose logs
 docker-compose down --rmi all -v --remove-orphans
 ```
 
+Optional:
+
+- How do I make sure the database is ready before starting the application? Check: https://docs.docker.com/compose/how-tos/startup-order/
+
 ## Summary
 
 In this exercise, you learned how to create a Docker Compose file for the Todos.Api project. You also learned how to define services for the Todos.Api project and a PostgreSQL database service in the Docker Compose file. You ran the services using Docker Compose and interacted with the application to create a new task in the database. Finally, you updated the Docker Compose file to include the application service and ran the services again to verify the changes.

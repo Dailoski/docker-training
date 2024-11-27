@@ -71,6 +71,11 @@ docker ps
 docker stop {{CONTAINER_ID}}
 ```
 
+Optional:
+
+- Create image without multi-stage build and compare the size of the images.
+- Run the container and check what files exist in the container. Does the source code exist in the resulting?
+
 ## Summary
 
 In this exercise, you learned how to create a multi-stage Dockerfile for the Todos.Api project. The multi-stage Dockerfile helps to reduce the size of the final Docker image by using separate build and runtime stages. Multi-stage files also simplify the build process as we don't need to install build tools on the host machine in order to build the project.
