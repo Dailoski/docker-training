@@ -56,6 +56,7 @@ Optional:
 - Run a `hello-world` image, see the output, and remove the container
 - When you run `docker run --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword -d postgres` what does `-e` flag do?
 - Run `rabbitmq` image and login to the management console
+- Figure out how to run a container and remove automatically it after it stops. See `docker run` help for more info.
 
 ## Summary
 

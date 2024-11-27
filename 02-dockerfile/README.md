@@ -96,17 +96,41 @@ docker ps
 docker logs {{CONTAINER_ID}}
 ```
 
-12. Stop the container using the following command:
+12. Open terminal in the running container using the following command:
+
+```bash
+docker exec -it {{CONTAINER_ID}} /bin/bash
+```
+
+13. List the files in the container using the following command:
+
+```bash
+ls
+```
+
+> [!NOTE]
+> You should see the `Todos.Api.dll` file in the container.
+>
+> Type `exit` to exit the container terminal.
+
+14. Stop the container using the following command:
 
 ```bash
 docker stop {{CONTAINER_ID}}
 ```
 
-13. Remove the container using the following command:
+15. Remove the container using the following command:
 
 ```bash
 docker rm {{CONTAINER_ID}}
 ```
+
+Optional:
+
+- Add any endpoint to the `Todos.Api` you like and build a new docker image with `v2` tag. Run the new version of the container and test the new endpoint.
+- Name the Dockerfile as `Dockerfile.v2` and try to build the image. See docker build help.
+- Can I change `EXPOSE` port to something else? What happens if I change it to `8081`?
+- How can I open terminal in the container?
 
 ## Summary
 
