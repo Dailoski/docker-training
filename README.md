@@ -20,6 +20,7 @@ Before we start with the training, make sure you have the following tools instal
 - [Exercise 3: Create a Docker Compose file for the Todos.Api project](./03-docker-compose/README.md)
 - [Exercise 4: Using Multi-stage Dockerfile for the Todos.Api project](./04-multistage-dockerfile/README.md)
 - [Exercise 5: Push Docker image to AWS ECR](./05-docker-push/README.md)
+- [Exercise 6: Automate Docker image build and push using GitHub Actions](./06-ci/README.md)
 
 ## Getting Started
 

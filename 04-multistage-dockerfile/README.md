@@ -32,7 +32,7 @@ RUN dotnet publish -c Release -o /app --no-restore
 FROM mcr.microsoft.com/dotnet/aspnet:9.0
 WORKDIR /app
 COPY --from=build /app ./
-ENTRYPOINT ["dotnet", "Todos.Api.dll"]
+CMD ["dotnet", "Todos.Api.dll"]
 ```
 
 3. Save the file and close the text editor.
