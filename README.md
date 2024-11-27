@@ -16,6 +16,7 @@ Before we start with the training, make sure you have the following tools instal
 
 - [Exercise 1: Run a Docker container](./01-docker-run/README.md)
 - [Exercise 2: Create a Dockerfile for the Todos.Api project](./02-dockerfile/README.md)
+- [Exercise 2.1: Create a Dockerfile with an entrypoint script](02.1-dockerfile-entrypoint/README.md)
 - [Exercise 3: Create a Docker Compose file for the Todos.Api project](./03-docker-compose/README.md)
 - [Exercise 4: Using Multi-stage Dockerfile for the Todos.Api project](./04-multistage-dockerfile/README.md)
 - [Exercise 5: Push Docker image to AWS ECR](./05-docker-push/README.md)
