@@ -25,7 +25,7 @@ In this exercise, you will push the Docker image for the Todos.Api project to AW
 5. In the menu go to Private registry > Repositories
 
 6. Click on the "Create repository" button
-7. Enter the "my-apps/todos-api" as the repository name and click on the "Create" button. Wait for the repository to be created.
+7. Enter the "todos-api" as the repository name and click on the "Create" button. Wait for the repository to be created.
 8. Go to "Security Credentials" section:
 
 ![security credentials](./assets/security-credentials.png "Security Credentials")
@@ -77,25 +77,25 @@ docker build -t todos-api .
 16. Tag the Docker image with the ECR repository URL:
 
 ```bash
-docker tag todos-api:latest {{YOUR_ACCOUNT_ID}}.dkr.ecr.eu-central-1.amazonaws.com/user1-repo:latest
+docker tag todos-api:latest {{YOUR_ACCOUNT_ID}}.dkr.ecr.eu-central-1.amazonaws.com/todos-api:latest
 ```
 
 17. Push the Docker image to ECR:
 
 ```bash
-docker push {{YOUR_ACCOUNT_ID}}.dkr.ecr.eu-central-1.amazonaws.com/user1-repo:latest
+docker push {{YOUR_ACCOUNT_ID}}.dkr.ecr.eu-central-1.amazonaws.com/todos-api:latest
 ```
 
 18. Remove the Docker image from your local machine by running the following command:
 
 ```bash
-docker rmi {{YOUR_ACCOUNT_ID}}.dkr.ecr.eu-central-1.amazonaws.com/user1-repo:latest
+docker rmi {{YOUR_ACCOUNT_ID}}.dkr.ecr.eu-central-1.amazonaws.com/todos-api:latest
 ```
 
 19. Run the Docker container from the image stored in ECR by running the following command:
 
 ```bash
-docker run -d -p 8080:8080 {{YOUR_ACCOUNT_ID}}.dkr.ecr.eu-central-1.amazonaws.com/user1-repo:latest
+docker run --rm -d -p 8080:8080 {{YOUR_ACCOUNT_ID}}.dkr.ecr.eu-central-1.amazonaws.com/todos-api:latest
 ```
 
 20. Open [http://localhost:8080/api/ping](http://localhost:8080/api/ping) in your browser to see the result.
