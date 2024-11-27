@@ -26,6 +26,10 @@ In this exercise, you will push the Docker image for the Todos.Api project to AW
 
 6. Click on the "Create repository" button
 7. Enter the "todos-api" as the repository name and click on the "Create" button. Wait for the repository to be created.
+
+> [!NOTE]
+> You can find instruction how to push the image to ECR in the "View push commands" section.
+
 8. Go to "Security Credentials" section:
 
 ![security credentials](./assets/security-credentials.png "Security Credentials")
