@@ -46,3 +46,12 @@ docker run --rm --entrypoint=ls my-curl -la
 ```
 
 9. Verify that the `ls -la` command output is displayed in the console.
+
+10. Run prune command to remove all stopped containers:
+
+```bash
+docker system prune
+```
+
+> [!NOTE]
+> Check what options are available for the `docker system prune` command: https://docs.docker.com/reference/cli/docker/system/prune/.
