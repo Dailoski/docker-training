@@ -9,19 +9,44 @@ In this exercise, you will push the Docker image for the Todos.Api project to AW
 
 ## Instructions
 
-1. Make sure you have the AWS CLI installed on your machine. You can check the installation by running the following command:
+1. Get credentials from you trainer how to access aws account.
+2. Go to https://console.aws.amazon.com/. And login with the credentials using "root user email" option:
+
+![root user login](./assets/root-user-login.png "Root User Login")
+
+3. Make sure you are in Frankfurt region (eu-central-1)
+
+![aws region](./assets/aws-region.png "AWS Region")
+
+1. Go to ECR service by searching for it in the search bar:
+
+![ecr search](./assets/ecr-search.png "ECR Search")
+
+1. In the menu go to Private registry > Repositories
+
+1. Click on the "Create repository" button
+1. Enter the "my-apps/todos-api" as the repository name and click on the "Create" button. Wait for the repository to be created.
+1. Go to "Security Credentials" section:
+
+![security credentials](./assets/security-credentials.png "Security Credentials")
+
+1. Go to "Access Keys" section and click on "Create New Access Key" button. Download the credentials and save them in a safe place.
+
+2. Make sure you have the AWS CLI installed on your machine. You can check the installation by running the following command:
 
 ```bash
 aws --version
 ```
 
-2. Ask your trainer for the AWS credentials and configure the AWS CLI by running the following command:
+2. Run the following command to configure the AWS CLI:
 
 ```bash
 aws configure
 ```
 
-3. Run the following command to confirm that the AWS CLI is configured correctly:
+1. Use the downloaded credentials to configure the AWS CLI.
+
+2. Run the following command to confirm that the AWS CLI is configured correctly:
 
 ```bash
 aws sts get-caller-identity
@@ -32,7 +57,7 @@ Output should look similar to this:
 ```json
 {
   "UserId": "AIDAJDPLRKLG7EXAMPLE",
-  "Account": "711387109540",
+  "Account": "711387109540", // this is your account id!!!
   "Arn": "arn:aws:iam::711387109540:user/user1"
 }
 ```
@@ -40,7 +65,7 @@ Output should look similar to this:
 4. Log in to AWS ECR by running the following command:
 
 ```bash
-aws ecr get-login-password --region eu-central-1 | docker login --username AWS --password-stdin 711387109540.dkr.ecr.eu-central-1.amazonaws.com
+aws ecr get-login-password --region eu-central-1 | docker login --username AWS --password-stdin {{YOUR_ACCOUNT_ID}}.dkr.ecr.eu-central-1.amazonaws.com
 ```
 
 5. Build the Docker image for the Todos.Api project using the following command:
@@ -52,25 +77,25 @@ docker build -t todos-api .
 6. Tag the Docker image with the ECR repository URL:
 
 ```bash
-docker tag todos-api:latest 711387109540.dkr.ecr.eu-central-1.amazonaws.com/user1-repo:latest
+docker tag todos-api:latest {{YOUR_ACCOUNT_ID}}.dkr.ecr.eu-central-1.amazonaws.com/user1-repo:latest
 ```
 
 7. Push the Docker image to ECR:
 
 ```bash
-docker push 711387109540.dkr.ecr.eu-central-1.amazonaws.com/user1-repo:latest
+docker push {{YOUR_ACCOUNT_ID}}.dkr.ecr.eu-central-1.amazonaws.com/user1-repo:latest
 ```
 
 8. Remove the Docker image from your local machine by running the following command:
 
 ```bash
-docker rmi 711387109540.dkr.ecr.eu-central-1.amazonaws.com/user1-repo:latest
+docker rmi {{YOUR_ACCOUNT_ID}}.dkr.ecr.eu-central-1.amazonaws.com/user1-repo:latest
 ```
 
 9. Run the Docker container from the image stored in ECR by running the following command:
 
 ```bash
-docker run -d -p 8080:8080 711387109540.dkr.ecr.eu-central-1.amazonaws.com/user1-repo:latest
+docker run -d -p 8080:8080 {{YOUR_ACCOUNT_ID}}.dkr.ecr.eu-central-1.amazonaws.com/user1-repo:latest
 ```
 
 10. Open [http://localhost:8080/api/ping](http://localhost:8080/api/ping) in your browser to see the result.
