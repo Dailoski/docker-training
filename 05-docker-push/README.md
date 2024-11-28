@@ -110,6 +110,10 @@ docker run --rm -d -p 8080:8080 {{YOUR_ACCOUNT_ID}}.dkr.ecr.eu-central-1.amazona
 docker stop {{CONTAINER_ID}}
 ```
 
+Optional
+
+- How would you skip the `docker tag` step, can you do tagging only with `docker build`?
+
 ## Summary
 
 In this exercise, you learned how to push a Docker image to AWS Elastic Container Registry (ECR) and run a Docker container from the image stored in ECR.
