@@ -103,6 +103,17 @@ git push
 12. Wait for the AWS App Runner deployment to complete.
 13. Check that your change is reflected in the app by navigating to `{{DEFAULT_URL}}/api/ping` in your browser.
 
+Optional
+
+- Add a new workflow that triggers on every pull request to the `main` branch and deploys to new app runner service for testing. You can use `pull_request` event:
+
+```yaml
+on:
+  pull_request:
+    branches:
+      - main
+```
+
 ## Summary
 
 In this exercise, you automated the deployment of the Todos.Api project to AWS App Runner using GitHub Actions. The workflow triggers on every push to the `main` branch, builds and pushes the Docker image to AWS ECR, and deploys the application to AWS App Runner. This automation allows you to focus on developing your application while the deployment process is handled automatically.
