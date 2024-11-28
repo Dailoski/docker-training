@@ -15,17 +15,17 @@ In this exercise, you will create a GitHub Actions workflow for the Todos.Api pr
 
 ![repo secrets](./assets/repo-secrets.png "Repository Secrets")
 
-1. Clone the repository to your local machine:
+3. Clone the repository to your local machine:
 
 ```bash
 git clone {{YOUR_REPOSITORY_URL}}
 ```
 
-3. Navigate to the cloned directory
+4. Navigate to the cloned directory
 
-4. Copy the `Todos.Api` project to the cloned directory
+5. Copy the `Todos.Api` project to the cloned directory
 
-5. Create a multi-stage Dockerfile for the `Todos.Api` project:
+6. Create a multi-stage Dockerfile for the `Todos.Api` project:
 
 ```Dockerfile
 # Dockerfile
@@ -50,9 +50,9 @@ COPY --from=build /app ./
 CMD ["dotnet", "Todos.Api.dll"]
 ```
 
-5. Create a new file called `.github/workflows/docker.yml` in the root of the new repository.
+7. Create a new file called `.github/workflows/docker.yml` in the root of the new repository.
 
-6. Open the `docker.yml` in a text editor and add the following content:
+8. Open the `docker.yml` in a text editor and add the following content:
 
 ```yaml
 name: Build and Push Docker image
@@ -89,6 +89,7 @@ jobs:
 
       # Step 4: Build Docker image using multi-stage Dockerfile
       - name: Build Docker image
+        working-directory: ./Todos.Api
         run: |
           docker build -t todos-api .
 
@@ -104,9 +105,9 @@ jobs:
           docker push ${{ env.AWS_ACCOUNT_ID }}.dkr.ecr.eu-central-1.amazonaws.com/todos-api:${{ github.sha }}
 ```
 
-7. Save the file and close the text editor.
+9. Save the file and close the text editor.
 
-8. Commit the changes to the repository:
+10. Commit the changes to the repository:
 
 ```bash
 git add .
@@ -114,13 +115,13 @@ git commit -m "Add GitHub Actions workflow"
 git push
 ```
 
-9. Navigate to the repository on GitHub and click on the "Actions" tab to view the workflow execution:
+11. Navigate to the repository on GitHub and click on the "Actions" tab to view the workflow execution:
 
 ![GH Actions](./assets/gh-actions.png "GitHub Actions")
 
-10. Verify that the workflow has been executed successfully.
+12. Verify that the workflow has been executed successfully.
 
-11. Go to aws console and navigate to ECR service to see the pushed image. Inspect image tags.
+13. Go to aws console and navigate to ECR service to see the pushed image. Inspect image tags.
 
 ## Summary
 
