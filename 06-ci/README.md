@@ -107,6 +107,18 @@ jobs:
 
 9. Save the file and close the text editor.
 
+Make sure your new repository has the following structure:
+
+```plaintext
+.
+├── Todos.Api
+│   ├── Todos.Api.csproj
+│   ├── Dockerfile
+└── .github
+    └── workflows
+        └── docker.yml
+```
+
 10. Commit the changes to the repository:
 
 ```bash
