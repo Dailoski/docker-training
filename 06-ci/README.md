@@ -138,7 +138,7 @@ git push
 Optional
 
 - Make a change to the `Todos.Api` project and push the changes to the repository to see the workflow in action.
-- Pull the Docker image from AWS ECR and run it locally to verify that the image works as expected.
+- Run the latest version from AWS ECR.
 
 > [!NOTE]
 > To update latest image tag, you can use the following command:
@@ -146,6 +146,8 @@ Optional
 ```bash
 docker pull {{YOUR_ACCOUNT_ID}}.dkr.ecr.eu-central-1.amazonaws.com/todos-api:latest
 ```
+
+- What is the point of tagging images with latest and git sha?
 
 ## Summary
 
