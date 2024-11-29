@@ -58,10 +58,10 @@ In this exercise, you will deploy the Todos.Api project to AWS App Runner. AWS A
 
 ![service configuration](./assets/service-configuration.png "Service Configuration")
 
-17. Click on "Edit" in "Configure service" section.
-18. Update the environment variable `MY_NAME` with your name and click "Save".
+1.  Click on "Edit" in "Configure service" section.
+2.  Update the environment variable `MY_NAME` with your name and click "Save".
 
-19. You should see the environment variable in the "Runtime environment variables" section:
+3.  You should see the environment variable in the "Runtime environment variables" section:
 
 ![environment variable](./assets/environment-variable.png "Environment Variable")
 
