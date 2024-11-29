@@ -135,6 +135,18 @@ git push
 
 13. Go to aws console and navigate to ECR service to see the pushed image. Inspect image tags.
 
+Optional
+
+- Make a change to the `Todos.Api` project and push the changes to the repository to see the workflow in action.
+- Pull the Docker image from AWS ECR and run it locally to verify that the image works as expected.
+
+> [!NOTE]
+> To update latest image tag, you can use the following command:
+
+```bash
+docker pull {{YOUR_ACCOUNT_ID}}.dkr.ecr.eu-central-1.amazonaws.com/todos-api:latest
+```
+
 ## Summary
 
 Congratulations! You have successfully created a GitHub Actions workflow for the Todos.Api project. The workflow builds and tests the project and publishes the Docker image to AWS ECR after a successful build.
