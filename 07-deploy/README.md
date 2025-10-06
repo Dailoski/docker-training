@@ -63,8 +63,6 @@ In this exercise, you will deploy the Todos.Api project to AWS App Runner. AWS A
 
 19.  You should see the environment variable in the "Runtime environment variables" section:
 
-![environment variable](./assets/environment-variable.png "Environment Variable")
-
 20. Grab another coffee ☕️ while AWS App Runner updates your service.
 
 21. Open your browser and navigate to: `http://{{DEFAULT_DOMAIN}}/api/ping` to see the result.
