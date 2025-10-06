@@ -10,9 +10,7 @@ In this exercise, you will push the Docker image for the Todos.Api project to AW
 ## Instructions
 
 1. Get credentials from you trainer how to access aws account.
-2. Go to https://console.aws.amazon.com/. And login with the credentials using "root user email" option:
-
-![root user login](./assets/root-user-login.png "Root User Login")
+2. Go to console.aws.amazon.com/console
 
 3. Make sure you are in Frankfurt region (eu-central-1)
 
